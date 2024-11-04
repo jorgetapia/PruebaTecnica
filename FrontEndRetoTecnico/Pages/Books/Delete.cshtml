@@ -1,0 +1,19 @@
+﻿@page
+@model FrontEndRetoTecnico.Pages.Books.DeleteModel
+@{
+    ViewData["Title"] = "Eliminar Libro";
+}
+
+<h2>Eliminar Libro</h2>
+
+<p>¿Estás seguro que deseas eliminar este libro?</p>
+
+<div>
+    <h4>@Model.Book.Titulo</h4>
+    <p>@Model.Book.Autor</p>
+</div>
+<br />
+<form method="post">
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+</form>

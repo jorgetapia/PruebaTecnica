@@ -1,0 +1,39 @@
+﻿@page
+@model FrontEndRetoTecnico.Pages.Books.EditModel
+@{
+    ViewData["Title"] = "Editar Libro";
+}
+
+<h2>Editar Libro</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Book.Id" />
+    <div class="form-group">
+        <label asp-for="Book.Titulo"></label>
+        <input asp-for="Book.Titulo" class="form-control" />
+        <span asp-validation-for="Book.Titulo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Book.Autor"></label>
+        <input asp-for="Book.Autor" class="form-control" />
+        <span asp-validation-for="Book.Autor" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Book.Genero"></label>
+        <input asp-for="Book.Genero" class="form-control" />
+        <span asp-validation-for="Book.Genero" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Book.FechaPublicacion"></label>
+        <input asp-for="Book.FechaPublicacion" class="form-control" type="date" />
+        <span asp-validation-for="Book.FechaPublicacion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Book.Sinopsis"></label>
+        <textarea asp-for="Book.Sinopsis" class="form-control"></textarea>
+        <span asp-validation-for="Book.Sinopsis" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+</form>
